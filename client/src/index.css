@@ -1,0 +1,102 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+}
+
+:root {
+  /* Dark Luxury Theme by default since user asked for black background */
+  --background: 0 0% 0%; /* Pure Black */
+  --foreground: 300 10% 98%; /* Off-white with tiny pink tint */
+
+  --card: 0 0% 3%;
+  --card-foreground: 300 10% 98%;
+
+  --popover: 0 0% 3%;
+  --popover-foreground: 300 10% 98%;
+
+  /* Soft Pink/Lilac Accent from the header vibe */
+  --primary: 300 100% 89%; /* #FDC7FF */
+  --primary-foreground: 0 0% 0%;
+
+  --secondary: 0 0% 10%;
+  --secondary-foreground: 300 10% 98%;
+
+  --muted: 0 0% 10%;
+  --muted-foreground: 0 0% 60%;
+
+  --accent: 0 0% 10%;
+  --accent-foreground: 300 10% 98%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 0 0% 12%;
+  --input: 0 0% 12%;
+  --ring: 320 60% 80%;
+
+  --radius: 0.5rem;
+}
+
+body {
+  @apply bg-background text-foreground font-sans antialiased;
+}
+
+@keyframes pulse-opacity {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.35; }
+}
+
+@keyframes subtle-breath {
+  0%, 100% { 
+    opacity: 0.95; 
+  }
+  50% { 
+    opacity: 1; 
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.bg-shimmer-gold {
+  background: linear-gradient(90deg, #BF953F 25%, #FCF6BA 50%, #BF953F 75%);
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}
+
+.bg-shimmer-silver {
+  background: linear-gradient(90deg, #757575 25%, #E8E8E8 50%, #757575 75%);
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}
