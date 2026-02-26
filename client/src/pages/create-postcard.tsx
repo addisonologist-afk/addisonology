@@ -7,7 +7,7 @@ import rightSwirl from "@assets/Vector_3_1770623837112.png";
 import template1Front from "@assets/art_1771047124929.png";
 import template1BackFull from "@assets/86_1770887404803.png";
 import template1BackEmpty from "@assets/87_1770887404804.png";
-import template3Front from "@assets/image_1770956039235.png";
+import template3Front from "@assets/87_1770887404804.png";
 
 export default function CreatePostcard() {
   const [location] = useLocation();
